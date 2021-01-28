@@ -1,0 +1,41 @@
+SEÇÃO 1.4
+
+1.
+#lang scheme
+(define (sigma m n)
+  (if (> m n) 0
+      (+ m (sigma (+ 1 m) n))))
+
+2.
+(define (exp m n)
+  (if (= n 0) 1
+      (* m (exp m (- n 1))
+      )
+  )
+)
+
+(define (log m n)
+  (if (> n m) (+ 1 (log m (/ n m)))
+      1
+  )
+)
+
+3.
+(define (choose n k)
+  (if (> k 0)
+      (if (= n k) 1
+          (+ (choose (- n 1) k) (choose (- n 1) (- k 1)))
+          )
+      1)
+  )
+
+4.
+(define (fib m)
+  (if (< m 2)
+      (if (= m 0) 0
+          1)
+      (+ (fib (- m 1)) (fib (- m 2))))
+  )
+
+
+5.
